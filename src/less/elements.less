@@ -1,0 +1,52 @@
+#nuBlox
+{
+    // buttons
+    .nb-btn {
+        min-width: @btnHeight;
+        height: @btnHeight;
+        background: none;
+        border: none;
+        padding: 0;
+        color: @cLead;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            color: @cHighlight;
+        }
+
+        i {
+            font-size: 14px;
+        }
+    }
+
+    // dropdown list
+    .nb-dropdown {
+        li {
+            a {
+                cursor: pointer;
+                i {
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
+
+
+// clear
+.clrAfter {
+    clear: both;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+}

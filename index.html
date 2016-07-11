@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nuBlox</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+<body style="background:#f8f8f8;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- nuBlox app -->
+                <nublox :modules="[{type: 'html', name: 'HTML', icon: 'code'}, {type: 'image', name: 'Image', icon: 'image'}, {type: 'button', name: 'Button', icon: 'hand-pointer-o'}]"></nublox>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- nuBlox map -->
+    <textarea v-model="mapString">
+        %7B%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228100661181723661%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228116755253819121%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228130957638184202%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604261933476054692602750%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%2C%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222033475739432014098%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%5D%7D
+    </textarea>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- nuBlox main JS file -->
+    <script src="dist/build.js"></script>
+
+    <script type="text/javascript">
+
+    // Edit module event
+    $( 'body' ).on( 'nuBlox.edit', function( event, moduleId ) {
+        console.log( moduleId );
+    });
+
+    // Add module event
+    $( 'body' ).on( 'nuBlox.add', function( event, moduleId, moduleType ) {
+        console.log( moduleType );
+    });
+
+
+    $( '[data-nublox-title="201604222228100661181723661"]' ).change(function() {
+        console.log( $( this ).val() );
+    });
+
+    </script>
+
+</body>
+</html>

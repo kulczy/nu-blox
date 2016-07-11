@@ -1,0 +1,43 @@
+#nuBlox
+{
+    .nuBlox-col {
+        position: relative;
+        padding: @columnPadding;
+        box-shadow: 1px 1px 0px 0px #eee;
+        transition: all .2s;
+        overflow: hidden;
+
+        .nuBlox-col-options {
+            display: block;
+            width: 100%;
+            height: @colOptionsHeight;
+            white-space: nowrap;
+
+            .nb-col-size {
+                display: inline-block;
+                width: 50px;
+                color: @cLead;
+            }
+        }
+
+        .nb-modules-wrapper {
+            position: relative;
+            min-height: @moduleHeight + @moduleMargin;
+            overflow: hidden;
+        }
+
+        .nb-col-addmodule {
+            padding: 0 7px;
+        }
+
+        .nb-btn-add {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: @moduleHeight;
+            border-radius: @radius;
+            background: @cBack;
+        }
+    }
+}
