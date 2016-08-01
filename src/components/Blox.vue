@@ -13,9 +13,9 @@
         <div class="nuBlox-row" v-for="row in $root.mapJson._children" transition="animRow">
             <!-- row settings -->
             <div class="nuBlox-row-options text-right">
-                <button class="nb-btn" v-on:click="addCol(row)"><i class="fa fa-columns"></i></button>
-                <button class="nb-btn nb-btn-addrow" v-on:click="callModal('rows', $index, 'Add row')"><i class="fa fa-navicon"></i></button>
-                <button class="nb-btn" v-on:click="remove('', $index)"><i class="fa fa-trash"></i></button>
+                <button type="button" class="nb-btn" v-on:click="addCol(row)"><i class="fa fa-columns"></i></button>
+                <button type="button" class="nb-btn nb-btn-addrow" v-on:click="callModal('rows', $index, 'Add row')"><i class="fa fa-navicon"></i></button>
+                <button type="button" class="nb-btn" v-on:click="remove('', $index)"><i class="fa fa-trash"></i></button>
             </div><!-- /row settings -->
 
             <!-- col -->
@@ -23,9 +23,9 @@
                 <!-- col settings -->
                 <div class="nuBlox-col-options">
                     <span class="nb-col-size">{{col.size_lg}} / 12</span>
-                    <button class="nb-btn" v-on:click="size(col, '-')"><i class="fa fa-arrow-left"></i></button>
-                    <button class="nb-btn" v-on:click="size(col, '+')"><i class="fa fa-arrow-right"></i></button>
-                    <button class="nb-btn" v-on:click="remove(row, $index)"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="nb-btn" v-on:click="size(col, '-')"><i class="fa fa-arrow-left"></i></button>
+                    <button type="button" class="nb-btn" v-on:click="size(col, '+')"><i class="fa fa-arrow-right"></i></button>
+                    <button type="button" class="nb-btn" v-on:click="remove(row, $index)"><i class="fa fa-trash"></i></button>
                 </div><!-- /col settings -->
 
                 <!-- top clipboard area -->
@@ -38,9 +38,9 @@
                     <div class="nuBlox-mod" v-bind:class="{ 'nb-mod-margin': clipboard }" v-for="module in col._children" transition="animModule">
                         <!-- module settings -->
                         <div class="nuBlox-mod-options">
-                            <button class="nb-btn" v-on:click="edit(module.id)"><i class="fa fa-pencil"></i></button>
-                            <button class="nb-btn" v-on:click="clipCut(module, col, $index)"><i class="fa fa-cut"></i></button>
-                            <button class="nb-btn" v-on:click="remove(col, $index)"><i class="fa fa-trash"></i></button>
+                            <button type="button" class="nb-btn" v-on:click="edit(module.id)"><i class="fa fa-pencil"></i></button>
+                            <button type="button" class="nb-btn" v-on:click="clipCut(module, col, $index)"><i class="fa fa-cut"></i></button>
+                            <button type="button" class="nb-btn" v-on:click="remove(col, $index)"><i class="fa fa-trash"></i></button>
                         </div><!-- /module settings -->
 
                         <div class="nuBlox-mod-info">
@@ -56,12 +56,12 @@
                     </div><!-- /module -->
 
                     <!-- space holder - add module -->
-                    <button class="nb-btn nb-btn-add" v-on:click="callModal('modules', col, 'Add module')"><i class="fa fa-plus"></i></button>
+                    <button type="button" class="nb-btn nb-btn-add" v-on:click="callModal('modules', col, 'Add module')"><i class="fa fa-plus"></i></button>
                 </div>
 
                 <!-- add module -->
                 <div class="nb-col-addmodule text-right">
-                    <button class="nb-btn" v-on:click="callModal('modules', col, 'Add module')"><i class="fa fa-plus"></i></button>
+                    <button type="button" class="nb-btn" v-on:click="callModal('modules', col, 'Add module')"><i class="fa fa-plus"></i></button>
                 </div>
 
             </div><!-- /col -->
