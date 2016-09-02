@@ -1,76 +1,27 @@
-# nu-blox
-nuBlox - [vue.js](https://vuejs.org/) based content builder.  
-Written primarily for [nuCms](https://github.com/nugato/nuCMS), but you can also integrate it with other software.
+# nublox
 
-More specifically, it's not a typical content builder. nuBlox returns JSON file which contains information about the structure of HTML elements.
+> A Vue.js project
 
-## Developing
+## Build Setup
 
-install dependencies
 ``` bash
+# install dependencies
 npm install
-```
 
-serve with hot reload at localhost:8080
-``` bash
+# serve with hot reload at localhost:8080
 npm run dev
-```
 
-build for production with minification
-``` bash
+# build for production with minification
 npm run build
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
 
-## Integration
-
-#### Dependencies
-+ jQuery
-+ Bootstrap
-+ FontAwesome
-
-
-#### Instalation
-
-+ Insert nuBlox script: dist/build.js  
-+ Display nuBlox
-
-``` bash
-<nublox></nublox>
-```
-
-+ Add textarea where JSON file will be stored
-
-``` bash
-<textarea v-model="mapString"></textarea>
-```
-
-#### Parameters
-
-**:modules** - array of objects of available nuBlox modules
-
-|               | Description                            |
-| ------------- |----------------------------------------|
-| type          | system module name                     |
-| name          | display module name                    |
-| icon          | module icon name from FontAwesome      |
-
-``` bash
-<nublox :modules="[{type: 'html', name: 'HTML', icon: 'code'}, {type: 'image', name: 'Image', icon: 'image'}, {type: 'button', name: 'Button', icon: 'hand-pointer-o'}]"></nublox>
-```
-
-#### Events
-nuBlox sends events so that it can communicate with an external application.
-
-On module edit:
-``` bash
-$( 'body' ).on( 'nuBlox.edit', function( event, moduleId ) {
-    //
-});
-```
-
-Add new module:
-``` bash
-$( 'body' ).on( 'nuBlox.add', function( event, moduleId, moduleType ) {
-    //
-});
-```
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

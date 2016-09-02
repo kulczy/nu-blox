@@ -1,124 +1,16 @@
-#nuBlox
+#nublox
 {
-    .nuBlox-mod {
+    .nublox-mod {
         position: relative;
         z-index: 1;
         height: @moduleHeight;
         margin-bottom: @moduleMargin;
-        // overflow: hidden;
         border-radius: @radius;
         background: @cHighlight;
         color: #fff;
 
-        &.nb-mod-margin {
-            // margin-bottom: 30px;
+        &.nublox-mod-row {
+            background: @cLead;
         }
-
-        .nuBlox-mod-options {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            padding: 7px;
-
-            .nb-btn {
-                color: darken(@cHighlight, 30%);
-                opacity: .4;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
-
-        .nuBlox-mod-info {
-            position: relative;
-            overflow: hidden;
-            padding: 15px 10px 15px 50px;
-            white-space: nowrap;
-
-            .nb-mod-info-icon {
-                position: absolute;
-                top: 11px;
-                left: 15px;
-                font-size: 20px;
-            }
-
-            .nb-mod-info-title {
-                font-size: 16px;
-            }
-
-            .nb-mod-info-title-input {
-                label {
-                    width: 100%;
-                    font-size: 16px;
-                    font-weight: normal;
-                    color: #fff;
-
-                    span {
-                        display: inline-block;
-                        cursor: pointer;
-                        padding: 1px 0;
-                        color: #fff;
-                    }
-
-                    input {
-                        width: 100%;
-                        background: darken(@cHighlight, 10%);
-                        border: none;
-                        border-radius: @radius;
-                        outline: none;
-                        color: #fff;
-                    }
-                }
-            }
-
-            .nb-mod-info-type {
-                margin-top: -5px;
-                opacity: .5;
-            }
-        }
-
-        &.nb-mod-pick {
-            cursor: pointer;
-            transition: background .3s;
-
-            &:hover {
-                background: darken(@cHighlight, 10%);
-            }
-        }
-    }
-
-    // clipboard area
-    .nb-clip-area-global {
-        width: 100%;
-        height: 26px;
-        line-height: 26px;
-        background: @cBack;
-        border: 1px dashed @cLead;
-        border-radius: @radius;
-        color: @cLead;
-        text-align: center;
-        cursor: pointer;
-        transition: all .2s;
-
-        &:hover {
-            color: @cHighlight;
-            border-color: @cHighlight;
-            background: lighten(@cHighlight, 45%);
-        }
-    }
-
-    .nb-clip-area {
-        position: absolute;
-        bottom: -4px;
-        box-shadow: 0px -6px 0px 0px #fff;
-        .nb-clip-area-global;
-    }
-
-    .nb-clip-area-out {
-        position: absolute;
-        top: 23px;
-        .nb-clip-area-global;
-        width: calc(~"100% -" @columnPadding*2 ~"");
     }
 }

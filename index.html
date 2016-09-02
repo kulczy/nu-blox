@@ -2,56 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>nuBlox</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nuBlox Vue 2</title>
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" >
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body style="background:#f8f8f8;">
+<body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
+    <!-- display nuBlox -->
+    <nublox output="nublox-data"></nublox>
 
-                <!-- nuBlox app -->
-                <nublox :modules="[{type: 'html', name: 'HTML', icon: 'code'}, {type: 'image', name: 'Image', icon: 'image'}, {type: 'button', name: 'Button', icon: 'hand-pointer-o'}]"></nublox>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- nuBlox map -->
-    <textarea v-model="mapString">
-        %7B%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228100661181723661%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228116755253819121%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228130957638184202%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604261933476054692602750%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%2C%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222033475739432014098%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%5D%7D
+    <!-- nuBlox JSON -->
+    <textarea id="nublox-data" rows="1" cols="1">
+        %7B%22id%22%3A%22pan201609012112210811515594144%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609012112210813212959633%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609012112210814286754569%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012112210827148913424%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012116561303414953388%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A3%7D%2C%7B%22id%22%3A%22col201609012116597898602219616%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012117027009909005973%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A9%7D%5D%7D%5D%7D
     </textarea>
+    <!-- %7B%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228100661181723661%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228116755253819121%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228130957638184202%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604261933476054692602750%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%2C%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222033475739432014098%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%5D%7D -->
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
-    <!-- bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- nuBlox main JS file -->
-    <script src="dist/build.js"></script>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 
-    <script type="text/javascript">
-
-    // Edit module event
-    $( 'body' ).on( 'nuBlox.edit', function( event, moduleId ) {
-        console.log( moduleId );
-    });
-
-    // Add module event
-    $( 'body' ).on( 'nuBlox.add', function( event, moduleId, moduleType ) {
-        console.log( moduleType );
-    });
-
-
-    $( '[data-nublox-title="201604222228100661181723661"]' ).change(function() {
-        console.log( $( this ).val() );
-    });
-
+    <script>
+    // $(document).ready(function() {
+    //     $( ".nublox-col" ).resizable({
+    //         grid: [ 0, 100000000 ],
+    //         containment: "parent",
+    //         stop: function( event, ui ) {
+    //             var panelWidth = $('#nublox').width();
+    //             var elementWidth = ui.size.width;
+    //             var colWidth = panelWidth/12;
+    //             var finalCols = Math.round(elementWidth/colWidth);
+    //             if (finalCols < 1) finalCols = 1;
+    //             if (finalCols > 12) finalCols = 12;
+    //             $(this).attr('style', '');
+    //         }
+    //     });
+    // });
     </script>
 
 </body>

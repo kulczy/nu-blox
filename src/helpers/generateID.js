@@ -1,4 +1,4 @@
-export default function () {
+export default function (prefix='') {
 
     // Get date
     var now = new Date();
@@ -23,5 +23,5 @@ export default function () {
     ms = ( '0' + ms ).slice( -3 );
 
     // Return full string
-    return y + m + d + ho + mn + se + ms + rdm;
+    return prefix + y + m + d + ho + mn + se + ms + rdm;
 };
