@@ -41,6 +41,8 @@ npm run build
 }"></nublox>
 ```
 
+Explanation:
+
 Option | Required | Description
 ------------- | -------------
 **output** | required | Id of textarea where nuBlox output encoded JSON
