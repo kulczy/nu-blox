@@ -9,6 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" >
+    <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" > -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" >
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,13 +22,24 @@
 <body>
 
     <!-- display nuBlox -->
-    <nublox output="nublox-data"></nublox>
+    <div style="padding: 20px;">
+        <nublox testtemplate="nublox-createtemplate" output="nublox-data" :input="{
+            modules: [
+                { name: 'Modul specjalny', type: 'special_module' }
+            ],
+            templates: [
+                { name: 'Templata specjalna', template: '' }
+            ]
+        }"></nublox>
+    </div>
 
     <!-- nuBlox JSON -->
+    <!-- %7B%22id%22%3A%22pan201609062107594411089956690%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609062107594427738241243%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609062107594422812082777%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062107594426628975522%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22no%20siema%22%7D%5D%2C%22size_lg%22%3A5%7D%2C%7B%22id%22%3A%22col201609062108038145016194997%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062108083198699006074%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22siema%20sciema%22%7D%2C%7B%22id%22%3A%22row201609062108102514745923578%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609062108102513002537674%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%5D%2C%22size_lg%22%3A12%7D%5D%2C%22title%22%3A%22eeeeelo%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062108125686661803315%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%7D%5D%2C%22size_lg%22%3A7%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%7D%5D%7D -->
     <textarea id="nublox-data" rows="1" cols="1">
-        %7B%22id%22%3A%22pan201609012112210811515594144%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609012112210813212959633%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609012112210814286754569%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012112210827148913424%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012116561303414953388%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A3%7D%2C%7B%22id%22%3A%22col201609012116597898602219616%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609012117027009909005973%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A9%7D%5D%7D%5D%7D
+        %7B%22id%22%3A%22pan201609092228160779933129924%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609092228160772362906327%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228160777563867132%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228160786901570019%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A5%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%2C%7B%22id%22%3A%22col201609092228498065877003082%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228549629041462954%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22id%22%3A%22row201609092228569563267318970%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228569577526569981%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%5D%2C%22settings%22%3A%7B%22size_lg%22%3A12%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228586987014134178%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A7%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%7D%7D
     </textarea>
-    <!-- %7B%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228100661181723661%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228116755253819121%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222228130957638184202%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%22%7D%5D%2C%22size_lg%22%3A6%7D%2C%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604261933476054692602750%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%2C%7B%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22201604222033475739432014098%22%2C%22moduleType%22%3A%22html%22%2C%22title%22%3A%22html%22%7D%5D%2C%22size_lg%22%3A12%7D%5D%7D%5D%7D -->
+
+    <textarea id="nublox-createtemplate" name="name" rows="8" cols="40"></textarea>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -34,21 +47,11 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 
     <script>
-    // $(document).ready(function() {
-    //     $( ".nublox-col" ).resizable({
-    //         grid: [ 0, 100000000 ],
-    //         containment: "parent",
-    //         stop: function( event, ui ) {
-    //             var panelWidth = $('#nublox').width();
-    //             var elementWidth = ui.size.width;
-    //             var colWidth = panelWidth/12;
-    //             var finalCols = Math.round(elementWidth/colWidth);
-    //             if (finalCols < 1) finalCols = 1;
-    //             if (finalCols > 12) finalCols = 12;
-    //             $(this).attr('style', '');
-    //         }
-    //     });
-    // });
+    $(document).ready(function() {
+        $('body').on('nublox.edit', function(e, info) {
+            console.log(info);
+        });
+    });
     </script>
 
 </body>

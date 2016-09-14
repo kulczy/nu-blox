@@ -2,8 +2,78 @@
 {
     .nublox-row {
         position: relative;
-        margin-bottom: 50px;
-        background: #fff;
+        margin-bottom: @moduleHeight/2+20;
+        background: @cBack;
         border-radius: @radius;
+        border-top: 1px solid @cLead;
+        border-left: 1px solid @cLead;
+        box-shadow: inset -1px -1px 0px 0px @cLead;
+        padding-left: @rowOptionsWidth;
+
+        .nublox-row-options {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            width: @rowOptionsWidth;
+            height: 100%;
+            background: @cBack;
+            box-shadow: inset -1px -1px 0px 0px @cLead;
+
+            .nublox-row-drop {
+                display: inline-block;
+                padding-top: 13px;
+                padding-bottom: 0;
+                width: 100%;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+                transition: color .2s;
+
+                &:hover {
+                    color: @cHighlight;
+                }
+            }
+
+            .nublox-row-addcol {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                text-align: center;
+                font-size: 14px;
+                transition: color .2s;
+                cursor: pointer;
+
+                &:hover {
+                    color: @cHighlight;
+                }
+            }
+        }
+
+        .nublox-row-addmodule {
+            position: absolute;
+            bottom: -(@moduleHeight/2)-10;
+            left: 0;
+
+            .nublox-row-addmodule-btn {
+                display: inline-block;
+                background: #fff;
+                width: @rowOptionsWidth;
+                height: @moduleHeight/2;
+                line-height: @moduleHeight/2;
+                text-align: center;
+                border-radius: @radius;
+                color: @cHighlight;
+                font-size: 18px;
+                cursor: pointer;
+                transition: all .2s;
+
+                &:hover {
+                    background: darken(@cBack, 5%);
+                }
+            }
+        }
     }
 }

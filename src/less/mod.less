@@ -5,12 +5,100 @@
         z-index: 1;
         height: @moduleHeight;
         margin-bottom: @moduleMargin;
+        padding: 15px 38px;
         border-radius: @radius;
         background: @cHighlight;
         color: #fff;
+        transition: background .2s;
+        // overflow-x: hidden;
+
+        &.dropdown-z-index {
+            z-index: 99;
+            // background: darken(@cHighlight, 5%);
+        }
 
         &.nublox-mod-row {
             background: @cLead;
+            color: darken(@cLead, 40%);
+
+            .nublox-mod-edit, .nublox-mod-drop {
+                &:hover {
+                    background: darken(@cLead, 5%);
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .nublox-mod-info {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+
+            .nublox-mod-title {
+                white-space: nowrap;
+                font-size: 15px;
+            }
+
+            .nublox-mod-title-edit {
+                input {
+                    background: lighten(@cHighlight, 5%);
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+
+                    &:focus {
+                        box-shadow: none !important;
+                        border: none !important;
+                        outline: none !important;
+                    }
+                }
+
+                &.nublox-mod-title-edit-row {
+                    input {
+                        background: darken(@cBack, 5%);
+                    }
+                }
+            }
+
+            .nublox-mod-type {
+                font-size: 11px;
+                text-transform: uppercase;
+                opacity: .7;
+            }
+        }
+
+        .nublox-mod-edit, .nublox-mod-drop {
+            position: absolute;
+            top: 0;
+            height: @moduleHeight;
+            line-height: @moduleHeight;
+            text-align: center;
+            font-size: 18px;
+            background: inherit;
+            cursor: pointer;
+            transition: background .2s;
+
+            &:hover {
+                background: darken(@cHighlight, 5%);
+                box-shadow: none;
+            }
+        }
+
+        .nublox-mod-drop {
+            z-index: 1;
+            left: 0;
+            width: @moduleHeight/2;
+            border-radius: @radius 0 0 @radius;
+        }
+
+        .nublox-mod-edit {
+            z-index: 2;
+            right: 0;
+            width: @moduleHeight;
+            box-shadow: inset 1px 0 0px 0px rgba(255,255,255,0.2);
+            border-radius: 0 @radius @radius 0;
         }
     }
 }

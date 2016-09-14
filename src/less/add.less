@@ -1,0 +1,44 @@
+#nublox {
+    .nublox-modal-add {
+        .tab-content {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .nublox-add-mod {
+        position: relative;
+        z-index: 1;
+        height: 120px;
+        margin-bottom: @moduleMargin;
+        border-radius: @radius;
+        background: @cBack;
+        color: #333;
+        cursor: pointer;
+        border: 1px solid @cBack;
+        transition: all .2s;
+        text-align: center;
+
+        &:hover {
+            // background: darken(@cHighlight, 10%);
+            border: 1px solid @cHighlight;
+            color: @cHighlight;
+        }
+
+        .nublox-add-mod-image {
+            height: 85px;
+            line-height: 85px;
+            font-size: 30px;
+            overflow: hidden;
+        }
+    }
+
+    .nublox-modal-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        z-index: 999999;
+    }
+}

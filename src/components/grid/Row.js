@@ -3,11 +3,15 @@ import grid from '../../helpers/defaults';
 
 export default {
     components: { gridCol },
-    props: [ 'index', 'parent' ],
+    props: [ 'row', 'index', 'parent', 'displaysize' ],
 
     computed: {
-        row() {
-            return this.parent[this.index];
+        parentChildren() {
+            return this.parent._children;
+        },
+
+        parentType() {
+            return (this.parent.type === 'panel') ? true : false;
         }
     }
 }
