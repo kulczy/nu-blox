@@ -14,7 +14,7 @@ import generateID from './helpers/generateID';
 
 export default {
     components: { Panel, Modal, Add, Settings },
-    props: [ 'output', 'input', 'testtemplate' ],
+    props: [ 'output', 'input', 'testtemplate', 'imgpath' ],
 
     data() {
         return {
@@ -26,6 +26,7 @@ export default {
             displaySize: 'size_lg', // display size
             elements: {}, // all available modules and templates
             modalInfo: { title: null, footer: false, modalComp: null, place: null, newSettings: null, index: null }, // default data for modal
+            readOnly: true // remove all action buttons
         }
     },
 
@@ -58,11 +59,14 @@ export default {
 
         // mix inputs data with defaults
         let allElements = {};
-        allElements.modules = defaultElements.modules.concat(this.input.modules);
-        allElements.templates = defaultElements.templates.concat(this.input.templates);
+        allElements.modules = this.input.modules ? defaultElements.modules.concat(this.input.modules) : defaultElements.modules;
+        allElements.templates = this.input.templates ? defaultElements.templates.concat(this.input.templates) : defaultElements.templates;
         allElements.rows = defaultElements.rows;
         allElements.clipboard = []; // create clipboard
         this.elements = allElements;
+
+        // add image path to root
+        this.$root.imgpath = this.imgpath;
     },
 
     events: {

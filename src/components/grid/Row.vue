@@ -4,7 +4,7 @@
     <div class="nublox-row">
 
         <!-- row options -->
-        <div class="nublox-row-options">
+        <div class="nublox-row-options nublox-readonly">
             <div class="dropdown">
                 <div class="nublox-row-drop" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></div>
                 <ul class="dropdown-menu">
@@ -20,7 +20,7 @@
         <grid-col v-for="col in row._children" :col="col" :index="$index" :row="row._children" :displaysize="displaysize"></grid-col>
 
         <!-- add row -->
-        <div v-if="parentType" class="nublox-row-addmodule">
+        <div v-if="parentType" class="nublox-row-addmodule nublox-readonly">
             <div @click="this.$dispatch('openModal', 'add', parent, index)" class="nublox-row-addmodule-btn"><i class="fa fa-plus"></i></div>
         </div>
 

@@ -9,7 +9,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" >
-    <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" > -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" >
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,41 +17,50 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        /*.nublox-readonly, .ui-resizable-handle { display: none !important; }*/
+    </style>
 </head>
 <body>
 
     <!-- display nuBlox -->
     <div style="padding: 20px;">
-        <nublox testtemplate="nublox-createtemplate" output="nublox-data" :input="{
+        <nublox testtemplate="nublox-createtemplate" output="nublox-data" imgpath="src/assets/" :input="{
             modules: [
-                { name: 'Modul specjalny', type: 'special_module' }
+                { name: 'Tekst', type: 'text', ico: 'fa fa-align-left' },
+                { name: 'Obraz', type: 'image', ico: 'fa fa-picture-o' },
+                { name: 'HTML', type: 'html', ico: 'fa fa-code' },
+                { name: 'Plik', type: 'file', ico: 'fa fa-file' },
+                { name: 'Ikona', type: 'icon', ico: 'fa fa-circle-o' }
             ],
             templates: [
-                { name: 'Templata specjalna', template: '' }
+                { name: 'Ikony + Tekst', image: './src/assets/row_12.svg', imageWidth: 70, template: '%7B%22id%22%3A%22row201609241513289025542207034%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609241513289029352804082%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514383202196665252%22%2C%22moduleType%22%3A%22icon%22%2C%22title%22%3A%22icon%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514323721396031510%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A4%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%2C%7B%22id%22%3A%22col201609241514174366546778280%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514403857101654927%22%2C%22moduleType%22%3A%22icon%22%2C%22title%22%3A%22icon%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514337618458281638%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A4%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%2C%7B%22id%22%3A%22col201609241514213303713099593%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514427849828712491%22%2C%22moduleType%22%3A%22icon%22%2C%22title%22%3A%22icon%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609241514352561871644344%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A4%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D' }
             ]
         }"></nublox>
     </div>
 
     <!-- nuBlox JSON -->
-    <!-- %7B%22id%22%3A%22pan201609062107594411089956690%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609062107594427738241243%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609062107594422812082777%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062107594426628975522%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22no%20siema%22%7D%5D%2C%22size_lg%22%3A5%7D%2C%7B%22id%22%3A%22col201609062108038145016194997%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062108083198699006074%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22siema%20sciema%22%7D%2C%7B%22id%22%3A%22row201609062108102514745923578%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609062108102513002537674%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%5D%2C%22size_lg%22%3A12%7D%5D%2C%22title%22%3A%22eeeeelo%22%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609062108125686661803315%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%7D%5D%2C%22size_lg%22%3A7%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%7D%5D%7D -->
-    <textarea id="nublox-data" rows="1" cols="1">
-        %7B%22id%22%3A%22pan201609092228160779933129924%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609092228160772362906327%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228160777563867132%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228160786901570019%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A5%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%2C%7B%22id%22%3A%22col201609092228498065877003082%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228549629041462954%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22id%22%3A%22row201609092228569563267318970%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228569577526569981%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%5D%2C%22settings%22%3A%7B%22size_lg%22%3A12%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228586987014134178%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A7%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%7D%7D
-    </textarea>
+    <!-- %7B%22id%22%3A%22pan201609092228160779933129924%22%2C%22type%22%3A%22panel%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22row201609092228160772362906327%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228160777563867132%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228160786901570019%22%2C%22moduleType%22%3A%22text%22%2C%22title%22%3A%22text%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A5%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%2C%7B%22id%22%3A%22col201609092228498065877003082%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228549629041462954%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22id%22%3A%22row201609092228569563267318970%22%2C%22type%22%3A%22row%22%2C%22_children%22%3A%5B%7B%22id%22%3A%22col201609092228569577526569981%22%2C%22type%22%3A%22col%22%2C%22_children%22%3A%5B%5D%2C%22settings%22%3A%7B%22size_lg%22%3A12%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%2C%7B%22type%22%3A%22module%22%2C%22id%22%3A%22mod201609092228586987014134178%22%2C%22moduleType%22%3A%22button%22%2C%22title%22%3A%22button%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%22size_lg%22%3A7%2C%22size_md%22%3A12%2C%22size_sm%22%3A12%2C%22size_xs%22%3A12%7D%7D%5D%2C%22title%22%3A%22wiersz%20(kliknij%20%C5%BCeby%20zmieni%C4%87%20tytu%C5%82)%22%2C%22settings%22%3A%7B%7D%7D%5D%2C%22settings%22%3A%7B%7D%7D -->
+    <textarea id="nublox-data" rows="1" cols="1"></textarea>
 
+    <!-- textarea for 'testtemplate' create -->
     <textarea id="nublox-createtemplate" name="name" rows="8" cols="40"></textarea>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="dist/nublox.min.js"></script>
 
     <script>
     $(document).ready(function() {
+
         $('body').on('nublox.edit', function(e, info) {
             console.log(info);
         });
+
     });
     </script>
 
-</body>
-</html>
+    </body>
+    </html>

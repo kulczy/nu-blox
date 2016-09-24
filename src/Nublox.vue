@@ -15,13 +15,13 @@
                     </ol>
                 </div>
             </div>
-            <div class="col-xs-4 text-right">
+            <div class="col-xs-4 text-right nublox-readonly">
                 <div class="nublox-navbar-display">
                     <span>Rozmiaru ekranu:</span>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_lg'}" @click="displaySize = 'size_lg'"><i class="fa fa-tv"></i></button>
-                        <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_md'}" @click="displaySize = 'size_md'"><i class="fa fa-tablet"></i></button>
-                        <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_sm'}" @click="displaySize = 'size_sm'"><i class="fa fa-laptop"></i></button>
+                        <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_md'}" @click="displaySize = 'size_md'"><i class="fa fa-laptop"></i></button>
+                        <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_sm'}" @click="displaySize = 'size_sm'"><i class="fa fa-tablet"></i></button>
                         <button type="button" class="btn btn-default" v-bind:class="{ 'btn-success': displaySize === 'size_xs'}" @click="displaySize = 'size_xs'"><i class="fa fa-mobile-phone"></i></button>
                     </div>
                     <span @click="this.$dispatch('openModal', 'settings', bloxJson)" class="nublox-navbar-settings">

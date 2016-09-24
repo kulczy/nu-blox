@@ -1,0 +1,138 @@
+#nublox
+{
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input[type='number'] {
+        -moz-appearance:textfield;
+    }
+
+    .nublox-settings-option {
+        margin-bottom: 20px;
+
+        .nublox-settings-title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .nublox-settings-head {
+        position: relative;
+        font-weight: bold;
+        margin-top: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #eee;
+        }
+    }
+
+    .nublox-settings-box {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        border: 1px dashed #999;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            border: 1px solid #000;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            width: 50px;
+            height: 50px;
+            border: 1px dashed #999;
+        }
+
+        .nublox-settings-box-title {
+            position: absolute;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .nublox-settings-box-title-margin {
+            .nublox-settings-box-title;
+            top: 15px;
+            left: 15px;
+        }
+
+        .nublox-settings-box-title-padding {
+            .nublox-settings-box-title;
+            top: 90px;
+            left: 90px;
+        }
+
+        .nublox-settings-box-input {
+            position: absolute;
+            width: 50px;
+        }
+
+        .nublox-settings-box-input-padding-top {
+            .nublox-settings-box-input;
+            top: 95px;
+            left: 150px;
+        }
+
+        .nublox-settings-box-input-padding-right {
+            .nublox-settings-box-input;
+            top: 158px;
+            left: 213px;
+        }
+
+        .nublox-settings-box-input-padding-bottom {
+            .nublox-settings-box-input;
+            top: 220px;
+            left: 150px;
+        }
+
+        .nublox-settings-box-input-padding-left {
+            .nublox-settings-box-input;
+            top: 158px;
+            left: 87px;
+        }
+
+        .nublox-settings-box-input-margin-top {
+            .nublox-settings-box-input;
+            top: 20px;
+            left: 150px;
+        }
+
+        .nublox-settings-box-input-margin-right {
+            .nublox-settings-box-input;
+            top: 158px;
+            left: 286px;
+        }
+
+        .nublox-settings-box-input-margin-bottom {
+            .nublox-settings-box-input;
+            top: 294px;
+            left: 150px;
+        }
+
+        .nublox-settings-box-input-margin-left {
+            .nublox-settings-box-input;
+            top: 158px;
+            left: 13px;
+        }
+    }
+}

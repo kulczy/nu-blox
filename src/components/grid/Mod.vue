@@ -11,7 +11,7 @@
         </div>
 
         <!-- module options -->
-        <div class="nublox-mod-drop nublox-sort-handle dropdown">
+        <div class="nublox-mod-drop nublox-sort-handle dropdown nublox-readonly">
             <div class="nublox-col-drop" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></div>
             <ul class="dropdown-menu">
                 <li><span @click="this.$dispatch('openModal', 'settings', mod)"><i class="fa fa-cog"></i> Ustawienia</span></li>

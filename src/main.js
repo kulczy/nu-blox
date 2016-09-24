@@ -6,5 +6,11 @@ Vue.use(VueDragableFor)
 
 new Vue({
     el: 'body',
-    components: { Nublox }
+    components: { Nublox },
+
+    data() {
+        return {
+            imgpath: ''
+        }
+    },
 });

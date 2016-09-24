@@ -5,7 +5,7 @@
 
         <!-- column options -->
         <div class="nublox-col-options">
-            <div>
+            <div class="nublox-readonly">
                 <div class="dropdown">
                     <div class="nublox-col-drop" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></div>
                     <ul class="dropdown-menu">
@@ -15,7 +15,6 @@
                 </div>
             </div>
             <div>
-                <!-- {{col.settings.size_lg}} / 12 -->
                 {{col.settings[displaysize]}} / 12
             </div>
         </div>
@@ -33,7 +32,7 @@
         </div>
 
         <!-- add module -->
-        <div v-if="!placeholder" class="nublox-col-addmodule">
+        <div v-if="!placeholder" class="nublox-col-addmodule nublox-readonly">
             <div @click="this.$dispatch('openModal', 'add', col)" class="nublox-col-addmodule-btn"><i class="fa fa-plus"></i></div>
         </div>
 

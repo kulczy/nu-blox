@@ -4,8 +4,8 @@
     <div>
 
         <!-- size  -->
-        <div v-if="place.type === 'col'">
-            <div>Szerokość kolumn:</div>
+        <div v-if="place.type === 'col'" class="nublox-settings-option">
+            <div class="nublox-settings-title">Szerokość kolumn:</div>
             <form class="form-inline">
                 <div class="row">
                     <div class="col-xs-3 col-sm-2">
@@ -60,33 +60,29 @@
             </form>
         </div>
 
-        <!-- class -->
-        <div>
-            <div>Klasa:</div>
-            <input type="text" class="form-control" v-model="newsettings.class">
-        </div>
-
-        <!-- padding -->
-        <div>
-            <div>Padding:</div>
+        <div class="nublox-settings-option">
             <div class="row">
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.padding_top" placeholder="top"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.padding_right" placeholder="right"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.padding_bottom" placeholder="bottom"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.padding_left" placeholder="left"></div>
+                <div class="col-xs-8">
+                    <div class="nublox-settings-title">Klasy:</div>
+                    <input type="text" class="form-control" v-model="newsettings.class">
+                </div>
+                <div class="col-xs-4">
+                    <div class="nublox-settings-title">ID:</div>
+                    <input type="text" class="form-control" v-model="newsettings.id">
+                </div>
             </div>
         </div>
 
-        <!-- margin -->
-        <div>
-            <div>Margin:</div>
-            <div class="row">
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.margin_top" placeholder="top"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.margin_right" placeholder="right"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.margin_bottom" placeholder="bottom"></div>
-                <div class="col-xs-3"><input type="text" class="form-control" v-model="newsettings.margin_left" placeholder="left"></div>
-            </div>
+        <div class="nublox-settings-option">
+            <div class="nublox-settings-title">Style CSS:</div>
+            <textarea class="form-control" v-model="newsettings.style" rows="5"></textarea>
         </div>
+
+
+
+
+
+
 
     </div>
 
