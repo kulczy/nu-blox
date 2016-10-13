@@ -1,5 +1,6 @@
 {
   "name": "nublox",
+  "version": "0.5.0",
   "description": "nuBlox - content builder for nuCms",
   "author": "sz.kulczy",
   "private": true,
